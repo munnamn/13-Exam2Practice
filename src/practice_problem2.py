@@ -83,6 +83,7 @@ def practice_problem2a(sequence, delta):
       :type sequence: [int]
       :type delta:    int
     """
+
     ###########################################################################
     # TODO: 3. Implement and test this function.
     #     WRITE THE TESTS FIRST (above).
