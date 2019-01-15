@@ -484,11 +484,11 @@ def practice_problem3c(sequence):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   8 minutes.
     ###########################################################################
-    # integer = []
-    # for k in range(len(sequence)):
-    #     if sequence[k] == 0:
-    #         integer = integer + len(sequence[k])
-    # return integer
+    integer = []
+    for k in range(len(sequence)):
+        if sequence[k] == 0:
+            integer = integer + [k]
+    return integer
 
 def run_test_practice_problem3d():
     """ Tests the    practice_problem3d    function. """
@@ -611,11 +611,11 @@ def practice_problem3d(sequence):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   8 minutes for each part of this problem.
     ###########################################################################
-    # for k in range (len(sequence)):
-    #     if sequence[k] == 0:
-    #         return len(sequence[k])
-    #     else:
-    #         return -1
+    for k in range (len(sequence)):
+        if sequence[k] == 0:
+            return k
+
+    return -1
     ###########################################################################
     # TODO: 6. Just ABOVE this _TODO_, you should have implemented
     #     a solution for the   practice_problem3d   function.
@@ -767,8 +767,10 @@ def practice_problem3e(sequence):
     #    TIME ESTIMATE:   8 minutes.
     ###########################################################################
     total = 0
-    for k in range (0, len(sequence)//2 - 1):
-        total = total + sequence[k]
+    for k in range (len(sequence)):
+        if k % 2 == 0:
+            total = total + sequence[k]
+
     return total
 
 

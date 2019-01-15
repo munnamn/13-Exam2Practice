@@ -42,7 +42,7 @@ def main():
 
     run_test_init()
     run_test_append_string()
-    # run_test_double()
+    run_test_double()
     # run_test_shrink()
     # run_test_double_then_shrink()
     # run_test_reset()
@@ -160,10 +160,10 @@ class Box(object):
         #       Read_this_ONLY_when_asked_Part_2.txt
         #    and complete your work on the problem.
         # ---------------------------------------------------------------------
-        additional_contents = self.contents + additional_contents
+
         s = ''
         for k in range(len(additional_contents)):
-            if  k  < self.volume:
+            if  k + len(self.contents)-2  < self.volume:
                 self.contents = self.contents + additional_contents[k]
             else:
                 s = s + additional_contents[k]
@@ -218,7 +218,6 @@ class Box(object):
         #    ** TWO **   LINES OF CODE.
         #######################################################################
 
-    def shrink(self, new_volume):
         """
         What comes in:
           -- self
