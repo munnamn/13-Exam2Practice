@@ -3,8 +3,8 @@ PRACTICE Exam 2, practice_problem 3.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Nihaar Munnamgi.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -180,7 +180,10 @@ def practice_problem3a(circles):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   10 minutes.
     ###########################################################################
-
+    value = 1
+    for k in range (len(circles)):
+      value = circles[k].center.x * value
+    return value
 
 def run_test_practice_problem3b():
     """ Tests the    practice_problem3b    function. """
@@ -354,7 +357,11 @@ def practice_problem3b(sequence):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   8 minutes.
     ###########################################################################
+    for k in range(len(sequence)-1):
+        if sequence[k] == sequence[len(sequence)-1]:
+            return True
 
+    return False
 
 def run_test_practice_problem3c():
     """ Tests the    practice_problem3c    function. """
@@ -477,7 +484,11 @@ def practice_problem3c(sequence):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   8 minutes.
     ###########################################################################
-
+    # integer = []
+    # for k in range(len(sequence)):
+    #     if sequence[k] == 0:
+    #         integer = integer + len(sequence[k])
+    # return integer
 
 def run_test_practice_problem3d():
     """ Tests the    practice_problem3d    function. """
@@ -600,7 +611,11 @@ def practice_problem3d(sequence):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   8 minutes for each part of this problem.
     ###########################################################################
-
+    # for k in range (len(sequence)):
+    #     if sequence[k] == 0:
+    #         return len(sequence[k])
+    #     else:
+    #         return -1
     ###########################################################################
     # TODO: 6. Just ABOVE this _TODO_, you should have implemented
     #     a solution for the   practice_problem3d   function.
@@ -751,6 +766,10 @@ def practice_problem3e(sequence):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   8 minutes.
     ###########################################################################
+    total = 0
+    for k in range (0, len(sequence)//2 - 1):
+        total = total + sequence[k]
+    return total
 
 
 ###############################################################################

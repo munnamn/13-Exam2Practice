@@ -40,8 +40,8 @@ def main():
     # UN-comment tests as you work the problems.
     ###########################################################################
 
-    # run_test_init()
-    # run_test_append_string()
+    run_test_init()
+    run_test_append_string()
     # run_test_double()
     # run_test_shrink()
     # run_test_double_then_shrink()
@@ -95,7 +95,7 @@ class Box(object):
           :type volume: int
         """
         # ---------------------------------------------------------------------
-        # TODO: 2. Implement and test this function.
+        # DONE: 2. Implement and test this function.
         #     See the testing code (below) for more examples.
         # ---------------------------------------------------------------------
         # ---------------------------------------------------------------------
@@ -103,6 +103,8 @@ class Box(object):
         #    DIFFICULTY:      3
         #    TIME ESTIMATE:   5 minutes.
         # ---------------------------------------------------------------------
+        self.contents = contents
+        self.volume = volume
 
     def append_string(self, additional_contents):
         """
@@ -158,6 +160,16 @@ class Box(object):
         #       Read_this_ONLY_when_asked_Part_2.txt
         #    and complete your work on the problem.
         # ---------------------------------------------------------------------
+        additional_contents = self.contents + additional_contents
+        s = ''
+        for k in range(len(additional_contents)):
+            if  k  < self.volume:
+                self.contents = self.contents + additional_contents[k]
+            else:
+                s = s + additional_contents[k]
+
+        return s
+
 
     def double(self):
         """
